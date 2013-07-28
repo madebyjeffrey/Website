@@ -1,0 +1,48 @@
+@import "util";
+
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 16pt;
+    }
+    $s: 200px;
+    article {
+        @include main-content($s);
+    }
+
+    #side {
+        @include rotate;
+
+        font-size: $s;
+        line-height: 180px;
+        //border: 1px solid blue;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        position: fixed;
+
+        box-sizing: content-box;
+        font-family: 'socr', sans-serif;
+
+
+        a {
+            text-decoration: none;
+            color: #DDDDDD;
+            //border: 1px dashed cyan;
+        }
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    .logo {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+    #logo {
+        width: 170px;
+    }
+
+}

@@ -1,0 +1,6 @@
+name: SOCR
+sidetext: S<span id="o">O</span>CR
+markdown: redcarpet
+pygments: true
+permalink: /:categories/:year-:month-:day-:title.html
+exclude: [ README.md ]

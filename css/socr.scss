@@ -1,0 +1,127 @@
+
+
+@import "normal";
+@import "special";
+@import "util";
+
+@import "morethan768";
+@import "lessthan768";
+
+
+
+$gstart: rgb(255,255,255);
+$gend: rgb(240, 240, 240);
+
+@import url(http://fonts.googleapis.com/css?family=Scada:700|Sintony);
+
+body {
+    width: 100%;
+    min-height: 100%;
+    background-color: white;
+    @include gradient($gstart, $gend);
+}
+
+#o {
+    color: #dddddd;
+}
+
+
+.inline-column {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    a {
+        text-decoration: none;
+
+    }
+
+    li {
+        display: inline-block;
+        text-align: center;
+        margin: 0;
+        width: 9em;
+        //margin-bottom: 2.5em;
+        vertical-align: top;
+
+
+        h1 {
+            font: normal 14pt 'Sintony', sans-serif;
+
+            margin-bottom: 0;
+            padding-top: 0;
+            margin-top: 0;
+            color: $darkgrey;
+        }
+
+    }
+}
+
+.widecolumn {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    a {
+        text-decoration: none;
+
+    }
+
+    li {
+        display: inline-block;
+        text-align: center;
+        margin: 0;
+        width: 45%;
+        //margin-bottom: 2.5em;
+        vertical-align: top;
+
+
+        h2 {
+            font: normal 18pt 'Sintony', sans-serif;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            margin-top: 0;
+            color: $darkgrey;
+            text-align: center;
+        }
+
+        h3 {
+            @include textfont(12pt);
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1em;
+            color: $darkgrey;
+        }
+
+    }
+}
+
+
+.presentation {
+    width: 4em;
+    height: 4em;
+    fill: $darkgrey;
+}
+
+
+
+#width-display {
+    position: fixed;
+    left: 10px;
+    font-size: 20px;
+    top: -webkit-calc(100% - 35px);
+    top: -moz-calc(100% - 35px);
+    top: calc(100% - 35px);
+}
+
+hr
+{
+    //width: -webkit-calc((100% - 200px));
+    width: 100%;
+    border: 1px solid #000;
+}

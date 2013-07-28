@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<h1>{{page.title}}</h1>
+<h2>Attending</h2>
+
+  <ul class="inline-column">
+    {% for member in page.attending %}
+      <li><h3>{{member.name}}</h3><h4>{{member.position}}</h4></li>
+    {% endfor %}
+  </ul>
+
+  {% if page.info %}
+  <h2>Information</h2>
+    <ul>
+    {% for fact in page.info %}
+      <li>{{fact}}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+<h2>Motions</h2>
+
+  <table>
+  {% for motion in page.motions %}
+    <tr><td>{{motion.status}}</td><td>{{motion.text}}</td></tr>
+  {% endfor %}
+  </table>
+
+  

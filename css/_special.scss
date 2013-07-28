@@ -1,0 +1,17 @@
+
+@import "util";
+
+.subjectbody {
+    li {
+        list-style-type: none;
+    }
+    li:nth-child(2n-1) {    // first item
+        @include headerfont(15pt);
+
+    }
+    li:nth-child(2n) {      // second item
+        @include textfont(12pt);
+        margin-bottom: 0.5em;
+    }
+}
+

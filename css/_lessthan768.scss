@@ -1,0 +1,47 @@
+
+@import "util";
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 12pt;
+    }
+    $s: 100px;
+    article {
+        @include main-content($s);
+    }
+
+    #side {
+        @include rotate;
+
+        font-size: $s;
+        line-height: 90px;
+        //border: 1px solid blue;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        position: fixed;
+
+        box-sizing: content-box;
+        font-family: 'socr', sans-serif;
+
+        a {
+            text-decoration: none;
+            color: #DDDDDD;
+            //border: 1px dashed cyan;
+        }
+    }
+
+    h2 {
+        font-size: 14pt;
+    }
+
+        .logo {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+    #logo {
+        width: 85px;
+    }
+
+}

@@ -1,0 +1,105 @@
+/* normal stylings on website */
+
+@import "util";
+
+$darkgrey: #333333;
+
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    @include textfont(12pt);
+}
+
+.centre {
+    text-align: center;
+    @include textfont(14pt);
+}
+
+img {
+    border: none; 
+}
+
+h1 {
+    padding-top: 0.25em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-family: 'Scada', sans-serif;
+    font-size: 32pt;
+    color: $darkgrey;
+}
+
+
+h2 {
+    text-align: justify;
+    line-height: normal;
+    margin: 0 auto;
+    //width: 60%;
+    //padding-bottom: 1em;
+    font-family: 'Sintony', sans-serif;
+    font-weight: 400;
+    color: $darkgrey;
+}
+
+h3 {
+    @include textfont(14pt);
+    margin-bottom: 5pt;
+}
+
+h4 {
+    @include textfont(12pt);
+    margin-top: 5pt;
+}
+
+p {
+    @include textfont(12pt);
+}
+
+li {
+    @include textfont(12pt);
+}
+// includes nested ol
+ol {
+    @include textfont(12pt);
+
+    margin-top: 0.1in;
+    //margin-left: 0.4in;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: li;
+}
+
+ol li {
+    padding-bottom: 10pt;
+}
+
+ol li:before {
+    content: counters(li, ".") ".";
+    counter-increment: li;
+    padding-right: 0.15in;
+}
+
+ol ol {
+    margin-left: 0.4in;
+}
+
+ol ol ol {
+    margin-left: 0.4in;
+}
+
+table {
+    @include textfont(12pt);
+    margin-left: 1em;
+    margin-top: 1em;
+
+    :nth-child(2n) {
+        padding-left: 1em;
+    }
+    td {
+        padding-bottom: 1.5em;
+    }
+}
